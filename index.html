@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <script type="text/javascript" src="theme/js/lib/html5.js"></script>
   <script type="text/javascript" src="theme/js/jquery.min.js"></script>
+  <script type="text/javascript" src="theme/js/lib/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="theme/js/lib/jquery-ui.min.js"></script>
   <script type="text/javascript" src="theme/js/js.js"></script>
   <link href="theme/css/styles.css" rel="stylesheet" type="text/css">
 </head>
@@ -15,46 +17,50 @@
 
 <body>
 <header class="header-wrapper">
-  <div class="header-top">
-    <a href="#" class="logo"><img src="theme/images/logo.png" alt=""/></a>
+  <div class="container">
+    <div class="header-top">
+      <a href="#" class="logo"><img src="theme/images/logo.png" alt=""/></a>
 
-    <div class="contact">
-      <div class="tel">8 <strong>(495)</strong> 111-22-33</div>
-      <span>ежедневно с 9:00 до 21:00 </span><a href="" class="email">Напишите нам</a>
+      <div class="btn-wrapper style-a with-phone">
+        <a href="#">обратный звонок</a>
+      </div>
+
+      <div class="contact">
+        <div class="tel">8 <strong>(495)</strong> 111-22-33</div>
+        <span>ежедневно с 9:00 до 21:00 </span><a href="" class="email">Напишите нам</a>
+      </div>
     </div>
-    <div class="btn-wrapper style-a">
-      <a href="#">обратный звонок</a>
-    </div>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="#pillow">о нас </a></li>
+        <li><a href="#choose"> как выбрать подушку </a></li>
+        <li><a href="#reason"> наши преимущества </a></li>
+        <li><a href="#products"> наша продукция </a></li>
+        <li><a href="#shipping"> доставка </a></li>
+        <li><a href="#contacts"> контакты </a></li>
+      </ul>
+    </nav>
   </div>
-  <nav class="nav">
-    <ul class="menu">
-      <li><a href="">о нас </a></li>
-      <li><a href=""> как выбрать подушку </a></li>
-      <li class="active"><a href=""> наши преимущества </a></li>
-      <li><a href=""> наша продукция </a></li>
-      <li><a href=""> доставка </a></li>
-      <li><a href=""> контакты </a></li>
-    </ul>
-  </nav>
 </header>
 
 <div class="content-wrapper">
 
 <section class="section section-top">
-  <h2>узнайте все о нашей продукции
+  <h2>узнайте все о нашей продукции <br/>
     всего за 2 минуты</h2>
 
   <div class="btn-wrapper style-mouse">
-    <a href=""></a>
+    <a href="#pillow"></a>
   </div>
   <div class="btn-wrapper style-b">
     <a href="">посмотреть видео полностью</a>
   </div>
 </section>
 
-<section class="section section-pillow">
+<section class="section section-pillow" id="pillow">
   <div class="container">
-    <h2></h2>
+    <h2>ПРОИЗВОДСТВО ПОДУШЕК <br/>
+      С ПАМЯТЬЮ ФОРМЫ</h2>
 
     <div class="items">
       <div class="item">
@@ -121,7 +127,7 @@
   </div>
 </section>
 
-<section class="section section-choose">
+<section class="section section-choose" id="choose">
   <div class="container">
     <h2>Как выбрать свою подушку</h2>
 
@@ -206,7 +212,7 @@
     </div>
 
     <div class="b-call">
-      <h3>не смогли определиться с выбором?
+      <h3>не смогли определиться с выбором? <br/>
         Звоните! Мы вам поможем.</h3>
 
       <p>8 800 200 00 00</p>
@@ -221,7 +227,7 @@
   </div>
 </section>
 
-<section class="section section-reason">
+<section class="section section-reason" id="reason">
   <div class="container">
     <h2>7 причин купить подушку у нас</h2>
 
@@ -229,56 +235,387 @@
 
       <div class="item">
         <div class="img"><img src="theme/images/tmp/reason-1.png" alt=""/></div>
-        <div class="text">Изготовление формованного ППУ</div>
+        <div class="text">Изготовление <br/> формованного ППУ</div>
       </div>
 
       <div class="item">
         <div class="img"><img src="theme/images/tmp/reason-2.png" alt=""/></div>
-        <div class="text">Дешевле
+        <div class="text">Дешевле <br/>
           чем у конкурентов
         </div>
       </div>
 
       <div class="item">
         <div class="img"><img src="theme/images/tmp/reason-3.png" alt=""/></div>
-        <div class="text">Быстрая замена
+        <div class="text">Быстрая замена <br/>
           товара при дефекте
         </div>
       </div>
 
       <div class="item">
         <div class="img"><img src="theme/images/tmp/reason-4.png" alt=""/></div>
-        <div class="text">Подушки
+        <div class="text">Подушки <br/>
           всегда в наличии
         </div>
       </div>
 
       <div class="item">
         <div class="img"><img src="theme/images/tmp/reason-5.png" alt=""/></div>
-        <div class="text">Возможен индивидуальный
-          пошив чехла для подушек и
+        <div class="text">Возможен индивидуальный <br/>
+          пошив чехла для подушек и <br/>
           матрасов
         </div>
       </div>
 
       <div class="item">
         <div class="img"><img src="theme/images/tmp/reason-6.png" alt=""/></div>
-        <div class="text">Кроме ходовых тканей, в ассортименте
-          есть специальная медицинская ткань из
+        <div class="text">Кроме ходовых тканей, в ассортименте <br/>
+          есть специальная медицинская ткань из <br/>
           которой мы шьем под заказ
         </div>
       </div>
 
       <div class="item">
         <div class="img"><img src="theme/images/tmp/reason-7.png" alt=""/></div>
-        <div class="text">Мы не перекупаем, а
-          сами производим свой товар и
+        <div class="text">Мы не перекупаем, а <br/>
+          сами производим свой товар и <br/>
           гарантируем качество
         </div>
       </div>
     </div>
-    <div class="btn-wrapper style-b">
+    <div class="btn-wrapper style-b btn-width-lg">
       <a href="">заказать подушку</a>
+    </div>
+  </div>
+</section>
+<section class="section section-products" id="products">
+  <div class="container">
+    <h2>наша продукция</h2>
+
+    <p>
+      Серия анатомических подушек Memory Foam из готовлена из вязкоэластичного, термочувствительного материала, более
+      известный как материал с "эффектом памяти" Подушки уменьшают давление на тело человека иобеспечивают максимальный
+      комфорт. Эргономическая форма подушки обеспечивает удобное положение шеи и головы во время сна и дневного отдыха
+    </p>
+
+    <div class="product-items">
+      <div class="item">
+        <div class="slider-wrapper">
+          <div id="slider" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="theme/images/tmp/slide1.jpg" alt=""/>
+              </li>
+              <li>
+                <img src="theme/images/tmp/slide1.jpg" alt=""/>
+              </li>
+              <li>
+                <img src="theme/images/tmp/slide1.jpg" alt=""/>
+              </li>
+            </ul>
+          </div>
+          <div id="carousel" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="theme/images/tmp/slider-thumb1.jpg"/>
+              </li>
+              <li>
+                <img src="theme/images/tmp/slider-thumb2.jpg"/>
+              </li>
+              <li>
+                <img src="theme/images/tmp/slider-thumb1.jpg"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text">
+          <h3>модель Classik</h3>
+          <ul>
+            <li><strong>В основе подушки:</strong> Memory Foam Classic мягкая пена</li>
+            <li><strong> C "эффектом памяти”:</strong> Комфортный, мягкий,</li>
+            <li><strong>Cпособствует:</strong> быстрому поивыканию даже для людей</li>
+          </ul>
+          <div class="size-wrapper"><span><strong>Размеры:</strong></span> <a class="active" href="">s</a> <a
+            href="">m</a> <a href="">l</a> <a href="">xl</a></div>
+
+          <div class="bottom">
+            <div class="price">
+              <span>2 210 руб.</span>
+              <span class="actual"> 1 105 руб.</span>
+            </div>
+            <div class="btn-wrapper style-b">
+              <a href="">заказать </a>
+            </div>
+            <div class="btn-wrapper style-a">
+              <a href="">Купить с 50% скидкой </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="slider-wrapper">
+          <div id="slider2" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="theme/images/tmp/slide1.jpg" alt=""/>
+              </li>
+              <li>
+                <img src="theme/images/tmp/slide1.jpg" alt=""/>
+              </li>
+              <li>
+                <img src="theme/images/tmp/slide1.jpg" alt=""/>
+              </li>
+            </ul>
+          </div>
+          <div id="carousel2" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="theme/images/tmp/slider-thumb1.jpg"/>
+              </li>
+              <li>
+                <img src="theme/images/tmp/slider-thumb2.jpg"/>
+              </li>
+              <li>
+                <img src="theme/images/tmp/slider-thumb1.jpg"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text">
+          <h3>модель Classik</h3>
+          <ul>
+            <li><strong>В основе подушки:</strong> Memory Foam Classic мягкая пена</li>
+            <li><strong> C "эффектом памяти”:</strong> Комфортный, мягкий,</li>
+            <li><strong>Cпособствует:</strong> быстрому поивыканию даже для людей</li>
+          </ul>
+          <div class="size-wrapper"><span><strong>Размеры:</strong></span> <a class="active" href="">s</a> <a
+            href="">m</a> <a href="">l</a> <a href="">xl</a></div>
+
+          <div class="bottom">
+            <div class="price">
+              <span>2 210 руб.</span>
+              <span class="actual"> 1 105 руб.</span>
+            </div>
+            <div class="btn-wrapper style-b">
+              <a href="">заказать </a>
+            </div>
+            <div class="btn-wrapper style-a">
+              <a href="">Купить с 50% скидкой </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="show-all">
+      <div class="btn-wrapper style-b">
+        <a href="">показать еще</a>
+      </div>
+
+      <div class="btn-wrapper style-b">
+        <a href="">показать все</a>
+      </div>
+    </div>
+
+    <div class="b-call">
+      <h3>определите свою скидку</h3>
+
+      <div class="scroll">
+        <div class="left-part">
+          <p>Скидка распростороняется на модели Classik</p>
+
+          <div id="slider-scroll"></div>
+          <ul>
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+          </ul>
+        </div>
+        <div class="right-part">
+          <span>Ваша скидка:</span><strong><span id="contentSlider"></span>%</strong>
+
+          <div class="btn-wrapper style-b">
+            <a href="">Получить скидку</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll">
+        <div class="left-part">
+          <p>Скидка распростороняется на другие модели</p>
+
+          <div id="slider-scroll1"></div>
+          <ul>
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+          </ul>
+        </div>
+        <div class="right-part">
+          <span>Ваша скидка:</span><strong><span id="contentSlider1"></span>%</strong>
+
+          <div class="btn-wrapper style-b">
+            <a href="">Получить скидку</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="img">
+        <img src="theme/images/tmp/img-2.png" alt=""/>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="section section-advantages">
+  <div class="container">
+    <h2>в чем преимущество наших подушек</h2>
+
+    <div class="items">
+      <div class="item">
+        <div class="img"><img src="theme/images/tmp/item-1.png" alt=""/></div>
+        <span>Долго сохраняют форму</span>
+      </div>
+
+      <div class="item">
+        <div class="img"><img src="theme/images/tmp/item-2.png" alt=""/></div>
+        <span>  Сохраняют тепло</span>
+      </div>
+
+      <div class="item">
+        <div class="img"><img src="theme/images/tmp/item-3.png" alt=""/></div>
+        <span> Отлично “дышат”</span>
+      </div>
+
+      <div class="item">
+        <div class="img"><img src="theme/images/tmp/item-4.png" alt=""/></div>
+        <span> Не собирают пыль и просты в уходе</span>
+      </div>
+
+      <div class="item">
+        <div class="img"><img src="theme/images/tmp/item-5.png" alt=""/></div>
+        <span> Не впитывают посторонних запахов</span>
+      </div>
+
+      <div class="item">
+        <div class="img"><img src="theme/images/tmp/item-6.png" alt=""/></div>
+        <span>  Гипоаллергенны</span>
+      </div>
+    </div>
+    <div class="b-call">
+      <h3>индивидуальное производство <br/>
+        изделий с памятью формы</h3>
+
+      <p>
+        формирование ппу - пенополиуретана под заказ
+      </p>
+
+      <div class="btn-wrapper style-b">
+        <a href="#">заказать</a>
+      </div>
+      <div class="img">
+        <img src="theme/images/tmp/img-call-3.png" alt=""/>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section-form" id="shipping">
+  <div class="container">
+    <h2>условия доставки</h2>
+
+    <form class="form-wrapper">
+      <h4>Оставьте ваши контактные
+        данные и наш консультант
+        свяжется с вами</h4>
+
+      <div class="form-type-text form-type-name">
+        <label for="name"></label>
+        <input type="text" placeholder="Ваше имя:" id="name"/>
+      </div>
+
+      <div class="form-type-text form-type-phone">
+        <label for="phone"></label>
+        <input type="text" placeholder="Номер телефона:" id="phone"/>
+      </div>
+
+      <div class="form-type-text form-type-email">
+        <label for="email"></label>
+        <input type="text" placeholder="E-MAIL:" id="email"/>
+      </div>
+      <div class="btn-wrapper style-a">
+        <input type="submit" value="отправить"/>
+      </div>
+    </form>
+
+    <div class="text">
+      <h5>Доставка по России</h5>
+
+      <p>
+        Доставка товара осуществляется в любой регион России удобными для Вас способами:
+      </p>
+
+      <p>
+        <strong> Почтой России или EMS.</strong> Отправка заказа возможна при условии предоплаты или наложенным платежом
+        (при получении
+        заказа на почте). Стоимость доставки по тарифам Почты России и EMS.
+      </p>
+
+      <p>
+        <strong>Курьерской службой "Курьер Сервис Экспресс".</strong> Отправка заказа возможна при условии предоплаты
+        или при получении
+        заказа. Стоимость доставки по тарифам курьерской службы.
+
+      </p>
+
+      <p>
+        <strong> Транспортной компанией "Деловые линии".</strong> Отправка заказа возможна при условии 100% предоплаты.
+        Стоимость доставки
+        по тарифам транспортной компании.
+        <span>Внимание! При заказе на сумму до 500 рублей требуется предоплата.</span>
+      </p>
+    </div>
+
+
+  </div>
+</section>
+<section class="section section-map" id="contacts">
+
+  <div class="container">
+    <div class="contact">
+      <p>
+        <strong> Мы работаем:</strong> <br/>
+        пн-пт: 9:00 -21:00 сб-вс 10:00 - 18:00
+      </p>
+
+      <p>
+        Цены указаны для розничного
+        покупателя, при продаже через сайт.
+      </p>
+
+      <p>
+        Цены в магазинах могут отличаться
+        от цен на сайте, скидки
+        распространяются на покупку через
+        сайт
+      </p>
     </div>
   </div>
 </section>
@@ -287,7 +624,12 @@
 
 <footer class="footer-wrapper">
   <div class="footer">
-
+    <h2>остались вопросы?</h2>
+    <p>задайте их менеджеру</p>
+    <span>8 (495) 111-22-33</span>
+    <div class="btn-wrapper style-a with-phone">
+      <a href="">обратный звонок</a>
+    </div>
   </div>
 </footer>
 </body>

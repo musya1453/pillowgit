@@ -1,3 +1,42 @@
-.form {
+.form-wrapper {
 
+  input[type=text] {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 0 rgba(70, 198, 230, 0.35);
+    border: none;
+    width: 100%;
+    padding: 15px 15px 15px 30px;
+    @include input-placeholder(#282828);
+    font-size: 13px;
+  }
+
+  .form-type-text {
+    margin-bottom: 7px;
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      @include transform(translateY(-50%));
+    }
+  }
+
+  .form-type-name label {
+    @include oneline-sprite-box($icons, profile)
+  }
+
+  .form-type-phone label {
+    @include oneline-sprite-box($icons, tel)
+  }
+
+  .form-type-email label {
+    @include oneline-sprite-box($icons, mail1)
+  }
+
+  .btn-wrapper {
+    text-align: center;
+    margin-top: 18px;
+  }
 }

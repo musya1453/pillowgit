@@ -1,0 +1,66 @@
+.btn-wrapper {
+
+  a, input {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: $medium;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    @include border-radius(6px);
+    @include transition(all .3s);
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &.with-phone a {
+    position: relative;
+    padding-left: 30px;
+
+    &:before {
+      @include pseudo-block($top: 50%, $left: 10px);
+      @include oneline-sprite-box($icons, phone);
+      @include transform(translateY(-50%));
+    }
+  }
+
+  &.style-a a, &.style-a input {
+    color: #9a550b;
+    background: linear-gradient(#f9e01f 0%, #f9ba15 100%);
+    border: none;
+    border-bottom: 4px solid #d8ac12;
+  }
+
+  &.style-b a {
+    background-image: linear-gradient(to top, #0db3ce 0%, #49c7e7 100%);
+    border-bottom: 4px solid #008caa;
+    font-size: 14px;
+    padding: 12px 18px;
+    color: #fff;
+  }
+
+  &.btn-width-lg a {
+    padding: 14px 50px;
+  }
+
+  &.style-mouse a {
+    display: inline-block;
+    padding: 10px;
+    width: 90px;
+    height: 90px;
+    @include border-radius(50%);
+    position: relative;
+    background-color: rgba(38, 62, 79, 0.6);
+    border: 3px solid #263e4f;
+    margin-bottom: 30px;
+
+    &:before {
+      @include pseudo-block($top: 50%, $left: 50%);
+      @include transform(translate(-50%, -50%));
+      @include oneline-sprite-box($icons, mouse);
+      animation: mouseanim 2s infinite linear;
+    }
+  }
+}

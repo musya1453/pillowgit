@@ -1,0 +1,78 @@
+.header-wrapper {
+
+  .header-top {
+    @include clearfix();
+    color: #273f50;
+    padding: 28px 0 14px;
+
+    .logo {
+      float: left;
+    }
+
+    .contact {
+      float: right;
+      text-align: right;
+      margin-top: 11px;
+
+      a {
+        color: #343f46;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        padding-left: 20px;
+        margin-left: 15px;
+
+        &:before {
+          @include pseudo-block($top: 50%, $left: 0);
+          @include transform(translateY(-50%));
+          @include oneline-sprite-box($icons, email);
+        }
+      }
+    }
+
+    .btn-wrapper {
+      float: right;
+      margin-left: 20px;
+      margin-top: 11px;
+    }
+
+    .tel {
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+  }
+
+  .nav ul {
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+    @include border-radius(5px);
+    overflow: hidden;
+
+    li {
+      display: table-cell;
+      text-align: center;
+
+      a {
+        background-color: #0db3ce;
+        @include background-image(linear-gradient(to top, #0db3ce 0%, #49c7e7 100%));
+        display: block;
+        padding: 14px;
+        font-size: 14px;
+        font-family: $medium;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 5px solid #008caa;
+        @include transition(color .2s);
+      }
+
+      &.active a, &:hover a {
+        @include background-image(linear-gradient(to top, #f9b915 0%, #f9e01f 100%));
+        color: #815c12;
+        border-bottom: 5px solid #e9a929;
+      }
+    }
+  }
+}
